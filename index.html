@@ -10,16 +10,50 @@
 
     <h1 id="titulo">Pokémon Quiz</h1> <br> <br>
 
+ <!--  OS NÍVEIS DE DIFICULDADE ESTARÃO INDISPONÍVEIS NO MOMENTO ENQUANTO O JOGO NÃO ESTIVER FUNCIONANDO CORRETAMENTE
+    
     <h2 id="nivel-dificuldade">Selecione o nível de dificuldade: </h2> <br> <br>
 
-    <img class="img-dificuldade" src="./imagens-gerais/green-background.png" alt="Nível fácil">
-    <h2 class="h2-dificuldade">Nível Fácil (2 Pokémon)</h2>
+    <img class="img-dificuldade" src="./imagens-gerais/green-background-texto.png" alt="Nível Fácil"> <br>
 
-    <img class="img-dificuldade" src="./imagens-gerais/grey-background.png" alt="Nível normal">
-    <h2 class="h2-dificuldade">Nível Normal (4 Pokémon)</h2>
+    <img class="img-dificuldade" src="./imagens-gerais/grey-background-texto.png" alt="Nível Médio"> <br>
 
-    <img class="img-dificuldade" src="./imagens-gerais/red-background.png" alt="Nível difícil">
-    <h2 class="h2-dificuldade">Nível Difícil (6 Pokémon)</h2>
+    <img class="img-dificuldade" src="./imagens-gerais/red-background-texto.png" alt="Nível Difícil">  -->
+
+    <h2 class="pergunta" >Qual desses é o Charmander?</h2>
+    <p id="pontuacao">Pontos: 0</p>
+
+    <div class="alternativas">
+        <img class="alternativa"
+            src="./imagens-pokemon/magmar.webp"
+            alt="">
+
+        <img class="alternativa"
+            src="./imagens-pokemon/arcanine.webp"
+            alt="">
+
+        <img class="alternativa"
+            src="./imagens-pokemon/charmander.webp"
+            alt="">
+
+        <img class="alternativa"
+            src="./imagens-pokemon/flareon.webp"
+            alt="">
+    </div>
+
+    <p id="resultado" aria-live="polite"></p>
+
+    <div id="fim-de-jogo" hidden>
+        <h2>Fim de jogo!</h2>
+        <p id="pontuacao-final"></p>
+        <button id="reiniciar-jogo"> Jogar novamente </button>
+    </div>
+
+    <button id="proxima-pergunta" hidden>
+        Próxima pergunta
+    </button>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
