@@ -2,12 +2,10 @@ let pontos = 0;
 
 const textoPontuacao = document.querySelector("#pontuacao");
 
-
 function adicionarPonto() {
     pontos = pontos + 1;
     textoPontuacao.textContent = "Pontos: " + pontos;
 }
-
 
 const perguntas = [
     {
@@ -119,8 +117,6 @@ const perguntas = [
         ],
         correta: 3
     }
-
-
 ];
 
 
@@ -132,6 +128,7 @@ const botaoProximo = document.querySelector("#proxima-pergunta");
 const fimDeJogo = document.querySelector("#fim-de-jogo");
 const pontuacaoFinal = document.querySelector("#pontuacao-final");
 const botaoReiniciar = document.querySelector("#reiniciar-jogo");
+const mensagemFinal = document.querySelector("#mensagem-final");
 
 
 let perguntaAtual = 0; // registra qual pergunta está sendo exibida. Começa na posição 0, que é a primeira pergunta do array
@@ -188,6 +185,8 @@ function mostrarPergunta() {
             botaoProximo.hidden = true;
 
             pontuacaoFinal.textContent = "Sua pontuação final: " + pontos + "/10"; // exibe a pontuação final
+            exibirMensagemFinal(); // exibe a mensagem final com base na pontuação
+
             fimDeJogo.hidden = false; // exibe a tela de fim de jogo
 
             return; 
@@ -212,4 +211,18 @@ function mostrarPergunta() {
 
         mostrarPergunta();
     });
+
+    function exibirMensagemFinal() {
+    if (pontos >= 10) {
+            mensagemFinal.textContent = "Você é um Mestre Pokémon!";
+    } else if (pontos == 9 || pontos == 8) {
+        mensagemFinal.textContent = "Você é um membro da Elite dos 4!";
+    } else if (pontos == 7 || pontos == 6) {
+        mensagemFinal.textContent = "Você é um líder de ginásio!";
+    } else {
+        mensagemFinal.textContent = "Você é um treinador iniciante!";
+    }
+    
+}
+    
 
